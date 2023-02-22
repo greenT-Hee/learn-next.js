@@ -1,0 +1,40 @@
+.card {
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.image {
+  display: block;
+  margin: 0 auto;
+}
+
+.wrapInfo {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.productName {
+  font-weight: 900;
+  font-size: 16px;
+  padding-bottom: 6px;
+}
+
+.price {
+  color: #fff;
+  background: rgb(205, 131, 240);
+  padding-top: 6px;
+  font-weight: 900;
+}
+
+.button {
+  margin-top: 20px;
+  display: block;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: rgb(179, 111, 211);
+  font-weight: 900;
+}
