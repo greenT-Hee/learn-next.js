@@ -1,0 +1,7 @@
+//https://velog.io/@nemo/nextjs-parsing-error
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": []
+}
