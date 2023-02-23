@@ -1,24 +1,24 @@
 import { Menu } from 'semantic-ui-react'
 
-export default function Gnb () {
+export default function Gnb() {
   const activeItem = "home";
   return (
     <Menu>
-    <Menu.Item
-      name='editorials'
-      active={activeItem === 'editorials'}
+      <Menu.Item
+        name='HOME'
+        active={activeItem === 'editorials'}
       // onClick={this.handleItemClick}
-    />
-    <Menu.Item
-      name='reviews'
-      active={activeItem === 'reviews'}
+      />
+      <Menu.Item
+        name='ABOUT'
+        active={activeItem === 'reviews'}
       // onClick={this.handleItemClick}
-    />
-    <Menu.Item
-      name='upcomingEvents'
-      active={activeItem === 'upcomingEvents'}
+      />
+      <Menu.Item
+        name='CONTACT'
+        active={activeItem === 'upcomingEvents'}
       // onClick={this.handleItemClick}
-    />
-  </Menu>
+      />
+    </Menu>
   )
 }

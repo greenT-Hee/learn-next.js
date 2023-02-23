@@ -2,15 +2,17 @@ import '../styles/globals.css'
 import 'semantic-ui-css/semantic.min.css'
 import Footer from '../src/component/Footer'
 import Top from '../src/component/Top'
+import 'semantic-ui-css/semantic.min.css'
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Top/>
+      <Top />
       <Component {...pageProps} />
       <Footer />
     </>
-  ) 
-  
+  )
+
 }
 
 export default MyApp

@@ -5,31 +5,45 @@ import Axios from 'axios'
 import { useEffect, useState } from 'react';
 import ItemList from '../src/component/ItemList';
 import { Header, Divider } from 'semantic-ui-react';
+import { Dimmer, Loader, Image, Segment } from 'semantic-ui-react'
+
 export default function Home() {
   const [list, setList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const API_URL = "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline";
-  
+
   async function getDate() {
     await Axios.get(API_URL)
-    .then(res => {
-      console.log(res.data);
-      setList(res.data);
-    })
+      .then(res => {
+        console.log(res.data);
+        setList(res.data);
+        setIsLoading(false);
+      })
   }
 
   useEffect(() => {
     getDate()
   }, [])
 
-  return(
+  return (
     <>
-      <Head>
-        <title>Apple store</title>
-      </Head>
-      <Header as="h2">베스트 상품</Header>
-      <Divider/>
-      <ItemList list={list}/>
-      <p>lorem</p>
+      {isLoading &&
+        <Dimmer active>
+          <Loader />
+        </Dimmer>
+      }
+      {
+        !isLoading &&
+        <>
+          <Head>
+            <title>Apple store</title>
+          </Head>
+          <Header as="h2">베스트 상품</Header>
+          <Divider />
+          <ItemList list={list} />
+          <p>lorem</p>
+        </>
+      }
     </>
   )
 }
